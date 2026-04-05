@@ -1,6 +1,6 @@
 # 🎬 Movie Recommendation System
 
-This is a project I made to test my knowledge after a python course
+This is an experimental project focused on technical understanding of practical implementation of multiple recommendation strategies
 ---
 
 ## Features
@@ -59,20 +59,17 @@ movie_recommender_portfolio/
 
 ---
 
-## Recommendation Modes
+## Implemented Approaches
 
-### 1. Popularity-Based Filtering
-Ranks movies using a weighted rating formula that balances:
-- average rating
-- number of votes
-- a minimum vote threshold
+### 1. Popularity-Based Recommendation
+This approach recommends movies based on weighted popularity scores. It is useful for suggesting broadly well-rated titles, especially when no user-specific preference history is available.
 
-This is useful for general recommendations.
+### 2. Content-Based Recommendation
+This approach uses TF-IDF vectorization on movie overviews and computes similarity between titles based on textual content. It is designed to recommend movies that are similar in theme or description to a selected title.
 
-### 2. Content-Based Filtering
-Uses TF-IDF on the overview column to measure text similarity between movie descriptions and recommend titles similar to a selected movie.
 ### 3. Collaborative Filtering
-Uses SVD from the `surprise` library to estimate user preferences from historical ratings and generate personalized recommendations.
+This approach uses SVD from the Surprise library to estimate user preferences based on interaction patterns. It aims to generate more personalized recommendations by learning from user-item relationships.
+
 
 ---
 
